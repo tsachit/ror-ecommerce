@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>RorEcommerce</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>RorEcommerce</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <!-- Google font -->
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Montserrat:400,500,700' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+
+		<!-- HEADER -->
+		<%= render 'common/header' %>
+		<!-- /HEADER -->
+
+		<!-- NAVIGATION -->
+		<%= render 'common/navigation' %>
+		<!-- /NAVIGATION -->
+
+		<!-- BREADCRUMB -->
+		<%= render 'common/breadcrumb' %>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+        <%= yield %>
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+
+		<!-- NEWSLETTER -->
+		<%= render 'common/newsletter' %>
+		<!-- /NEWSLETTER -->
+
+		<!-- FOOTER -->
+		<%= render 'common/footer' %>
+		<!-- /FOOTER -->
   </body>
 </html>
